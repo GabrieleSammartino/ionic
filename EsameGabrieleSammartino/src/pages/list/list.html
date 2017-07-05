@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      ListPage
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list inset>
+    <button ion-item *ngFor="let news of news" (click)="oneNews(news._id)">
+      {{news.title}}
+    </button>
+  </ion-list>
+
+
+
+</ion-content>

@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Form
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-list inset>
+
+    <ion-item>
+      <ion-label>Titolo</ion-label>
+      <ion-input type="text"[(ngModel)]="newPost.title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Descrizione</ion-label>
+      <ion-input type="text"[(ngModel)]="newPost.description"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Link immagine</ion-label>
+      <ion-input type="text"[(ngModel)]="newPost.img"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Categoria</ion-label>
+      <ion-select [(ngModel)]="newPost.category">
+        <ion-option value="Games">Games</ion-option>
+        <ion-option value="Technology">Technology</ion-option>
+        <ion-option value="Weather">Weather</ion-option>
+        <ion-option value="Medicina">Medicina</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-content>
+    <button ion-button round  (click)="addNews()">Inserisci News</button>
+    <ion-label>  News inserita:  </ion-label>
+    <ion-list>
+      <p> Titolo:  {{postInserted.title}}  </p>
+      <p> Imglink:  {{postInserted.img}}  </p>
+      <p> Categoria:  {{postInserted.category}}  </p>
+      <p> Descrizione:  {{postInserted.description}}  </p>
+      <p> Id:  {{postInserted._id}}  </p>
+
+
+
+
+    </ion-list>
+  </ion-content>
+
+
+
+
+
+
+
+</ion-content>

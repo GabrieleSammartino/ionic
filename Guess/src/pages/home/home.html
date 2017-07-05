@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>>GuessNumberTheGame</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label>Inserisci un numero da 0 a 100</ion-label>  </ion-item>
+    <ion-item>
+
+      <ion-input type="number" [(ngModel)]="numberUser">Inserisci il numero</ion-input>
+    </ion-item>
+    <button ion-button (click)= "buttonStart()">Gioca!</button>
+
+    <ion-item>
+      <ion-label> {{result}} </ion-label>
+    </ion-item>
+
+  <button ion-button (click)= "buttonReset()">Reset</button>
+  </ion-content>

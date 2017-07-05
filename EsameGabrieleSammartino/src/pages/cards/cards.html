@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cards</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <!-- Segment in content -->
+  <ion-segment [(ngModel)]="category" color="primary" (ionChange)="segmentChanged(category)">
+    <ion-segment-button value="Games">
+      Games
+    </ion-segment-button>
+    <ion-segment-button value="Technology">
+      Technology
+    </ion-segment-button>
+    <ion-segment-button value="Medicina">
+      Medicina
+    </ion-segment-button>
+    <ion-segment-button value="Weather">
+      Weather
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-card (click)="oneNews(news._id)" *ngFor='let news of newsCategory'>
+    <img src="{{news.img}}"/>
+    <ion-card-content>
+      <p>
+        {{news.category}}
+      </p>
+      <ion-card-title>
+        {{news.title}}
+      </ion-card-title>
+      <button ion-button icon-left (click)="deleteNews(news._id)">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+  <ion-card (click)="oneNews(news._id)" *ngFor='let news of news'>
+    <img src="{{news.img}}"/>
+    <ion-card-content>
+      <p>
+        {{news.category}}
+      </p>
+      <ion-card-title>
+        {{news.title}}
+      </ion-card-title>
+      <button ion-button icon-left (click)="deleteNews(news._id)">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+</ion-content>
